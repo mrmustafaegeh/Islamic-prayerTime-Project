@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="pray.css">
+  </head>
+  <body> 
+    <div style="text-align: center; font-size: 30px">
+      
+      <h2 style="text-align: left;">Prayer Time In North Cyprus</h2>
+      <hr style="border-color: black;">
+      <p>“Establish regular prayer: for prayer restrains from shameful and unjust deeds; and remembrance of Allah is the greatest (thing in life).”</p>
+      <input id="prayer" type="text" />
+      <button id="search-button">search</button>
+      <h2 style="color: aliceblue;" id="result"></h2>
+  </body>
+  <script>
+
+    var fajer = 5.39
+    var duhur = 12.39
+    var asar = 4.01
+    var maghrib = 6.37
+    var isha = 7.49
+    document.getElementById("search-button").addEventListener("click", function(){
+        var searchprayers = document.getElementById("prayer").value.toLowerCase()
+        if(searchprayers=="fajer"){
+            document.getElementById("result").innerHTML=fajer
+
+        }else if(searchprayers=="duhur"){
+            document.getElementById("result").innerHTML=duhur
+        }else if (searchprayers== "asar"){
+            document.getElementById("result").innerHTML=asar
+        }else if(searchprayers=="maghrib"){
+            document.getElementById("result").innerHTML =maghrib
+        }else if (searchprayers== "isha"){
+            document.getElementById("result").innerHTML =isha
+        }else{
+            document.getElementById("result").innerHTML = "invalid prayer name "+"<br"+ "please try again"
+
+        }
+  
+
+    })
+    
+
+
+    
+
+
+    
+  </script>
+</html>
